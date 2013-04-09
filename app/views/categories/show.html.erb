@@ -1,0 +1,7 @@
+<h3><%= @category.name %></h3>
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title, category_article_path(space_to_dash(@category.name), space_to_dash(article.title)) %></li>
+  <% end %>
+</ul>
+

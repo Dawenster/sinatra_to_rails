@@ -1,0 +1,6 @@
+<h3><%= @tag.name %></h3>
+<ul>
+  <% @tag.articles.each do |article| %>
+    <li><%= link_to article.title, tag_article_path(space_to_dash(@tag.name), space_to_dash(article.title)) %></li>
+  <% end %>
+</ul>
